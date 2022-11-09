@@ -53,7 +53,7 @@ const favoriteThings = {
 //Code here// adding new key and value pair in object
 favoriteThings.car = "Honda";
 favoriteThings["show"] = "Disney";
-console.log(favoriteThings)
+console.log(favoriteThings);
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'. (If they were either of those things already, change them to something else.)
@@ -79,9 +79,9 @@ var carDetails = {
 */
 //np//+QQ6 ReferenceError: 'newcar' is not defined? fixed by changing to car that I have added in my class earlier ques. Is there any other way of fixing it?
 //still having ReferenceError: car is not defined
-const { color, make, model, year } = car
+//XX//const { color, make, model, year } = carDetail // can change var but not obj
 
-// QQ6 what if some other obj also has same bikedetails color, make etc?
+//XX// QQ6 what if some other obj also has same bikedetails color, make etc?
 //Code Here
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
@@ -95,7 +95,7 @@ const { color, make, model, year } = car
 function greeting(obj) {
   //Code Here
   let { firstName, lastName, title } = obj;
-  let  {Mike, Joy, Mr } = name1   //QQ adding Mr. dot give error even in ""
+  //XX// let  {Mike, Joy, Mr } = name1   //QQ adding Mr. dot give error even in ""
 
   // Do not edit the code below.
   return "Hello, " + title + " " + firstName + " " + lastName + "!";
@@ -115,20 +115,15 @@ function greeting(obj) {
 //Code Here
 // QQ?. make fun after obj or let/.const? obj inside class. QQ Why using const mostly for obj?
 
-/* QQ soln 8.1
-const  StatePopulation ={UT: 10, CA: 20, Tx: 30, Az: 40}//QQ do i need ?
-let {UT , CA, Tx, AZ} = pop2022
-function totalpop (StatePopulation){//QQ how to solve by for looping 
- let  sum =  UT + CA + TX + AZ       
- return sum 
-}
-console.log(totalpop(10,20,0,10))
-*/
+//QQ soln 8.1
+//xx///
+//const  statePopulation ={UT: 10, CA: 20, Tx: 30, Az: 40}//QQ do i need ?
+//let {UT , CA, Tx, AZ} = pop2022
 
 // ans 8
 function totalPopulation(statpop) {
-  const {UT, CA, Tx, AZ} = statepop
-  return UT + CA + TX + AZ
+  const { UT, CA, Tx, AZ } = statepop;
+  return UT + CA + TX + AZ;
 }
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
@@ -141,12 +136,11 @@ function totalPopulation(statpop) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here // QQ9 The property values will be strings.  how does it matter and how to account in function for it ?? and a number type?
+//XX//Code Here // QQ9 The property values will be strings.  how does it matter and how to account in function for it ?? and a number type?
 
-function ingredients (nutrientsObj){
- const { carb, fat, protein} = nutrientsObj
- return [ carb, fat, protein]
-  
+function ingredients(nutrientsObj) {
+  const { carb, fat, protein } = nutrientsObj;
+  return [carb, fat, protein];
 }
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
@@ -167,8 +161,8 @@ var user = {
 */
 
 //Code Here
-user.name = "Bryan G. Smith"
-user.email = "bryan.smith@devmounta.in"
+user.name = "Bryan G. Smith";
+user.email = "bryan.smith@devmounta.in";
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
@@ -176,8 +170,8 @@ user.email = "bryan.smith@devmounta.in"
 */
 
 //Code Here
-delete user.age
-console.log(user)
+delete user.age;
+console.log(user);
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -188,15 +182,15 @@ console.log(user)
 
 //Code here
 class Cat {
-  constructor (name, age, color){
-    this.name = name ;
-    this.age = age ;
+  constructor(name, age, color) {
+    this.name = name;
+    this.age = age;
     this.color = color;
   }
 }
-//making object/ instance outside? with class and printing it 
-let cat1 = new Cat("Jill", 2, 'white' )
-console.log(cat1.name)
+//making object/ instance outside? with class and printing it
+let cat1 = new Cat("Jill", 2, "white");
+console.log(cat1.name);
 //QQ when to use const or let ? const cat1
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
@@ -210,21 +204,21 @@ console.log(cat1.name)
 //Code here
 // create class with constructors
 class Wizard {
-  constructor (name, age, favoriteSpell){
-    this.name = name 
-    this.age = age 
-    this.favoriteSpell = favoriteSpell
+  constructor(name, age, favoriteSpell) {
+    this.name = name;
+    this.age = age;
+    this.favoriteSpell = favoriteSpell;
   }
   //class has a function
-  castSpell (){
-    console.log (`${this.name} has cast ${this.favoriteSpell}`)
+  castSpell() {
+    console.log(`${this.name} has cast ${this.favoriteSpell}`);
   }
 }
 //nb. inside function use this.name not name / error name is deprecated ??this.name is associated with specific cat we are talking now.
 
 // Outside class calling an instance
-const harry = new Wizard ('Harry',10,'Vanish!')
-harry.castSpell()
+const harry = new Wizard("Harry", 10, "Vanish!");
+harry.castSpell();
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -249,23 +243,23 @@ harry.castSpell()
     to be newPrice.
 */
 
-//Code Here 
-// create class and set, make (functions in class)/methods 
+//Code Here
+// create class and set, make (functions in class)/methods
 class Phone {
-  constructor(brand, model, storage, color,price) {
-    this.brand = brand
-    this.model = model
-    this.storage = storage
-    this.color = color
-    this.price = price
-    this.sold  = false
-   }
-  sell (){
-    this.sold= true 
-    console.log (`${this.brand} ${this.model} has been sold.`)
+  constructor(brand, model, storage, color, price) {
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.price = price;
+    this.sold = false;
   }
-  changePrice (newPrice){
-    this.price = newPrice
+  sell() {
+    this.sold = true;
+    console.log(`${this.brand} ${this.model} has been sold.`);
+  }
+  changePrice(newPrice) {
+    this.price = newPrice;
   }
 }
 
@@ -280,9 +274,9 @@ class Phone {
 */
 
 //Code Here
-let phone1 = new Phone("samsung","m10",128,"silver","1500")
-let phone2 = new Phone("blackberry","m11",256,"black","500")
-let phone3 = new Phone("iphone","white",256,"m12","1000")
+let phone1 = new Phone("samsung", "m10", 128, "silver", "1500");
+let phone2 = new Phone("blackberry", "m11", 256, "black", "500");
+let phone3 = new Phone("iphone", "white", 256, "m12", "1000");
 /* 
   Call the changePrice function on one of your phones, 
   don't forget to pass in a new price 
@@ -291,8 +285,8 @@ let phone3 = new Phone("iphone","white",256,"m12","1000")
 */
 
 //Code Here
-phone1.changePrice(1220)
-console.log(phone1)
+phone1.changePrice(1220);
+console.log(phone1);
 /*
   Now call the sell method on one of your other phone objects
 
@@ -300,11 +294,10 @@ console.log(phone1)
 */
 
 //Code Here //
-phone2.sell()
-console.log(phone2.sold) --//QQ?
+phone2.sell();
+console.log(phone2.sold); //QQ?  sold
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
-
 
 /* np notes : spread operator ...
  "expands" an array into its elements, while rest syntax collects multiple elements and "condenses" them into a single element.
@@ -331,7 +324,7 @@ const colors = {
 //do not edit this object
 
 //Code Here
-const  colorsCopy = {...colors}
+const colorsCopy = { ...colors };
 /*
  Now use the spread operator to combine the following 2 objects into one. 
  Call the new variable helensInfo. 
@@ -358,11 +351,11 @@ const shippingInfo = {
 
 //Code Here
 
- const helensInfo = {...contactInfo, ...shippingInfo}
+const helensInfo = { ...contactInfo, ...shippingInfo };
 
 //Print helensInfo to see what it looks like, there should be no repeating properties.
 
-console.log(helensInfo)
+console.log(helensInfo);
 
 //////////////////////////// PROBLEM 16 ////////////////////////////
 
@@ -379,22 +372,22 @@ console.log(helensInfo)
 //Code Here
 class Vehicle {
   constructor(capacity, color, mileage) {
-    this.capacity = capacity
-    this.color = color
-    this.mileage = mileage
+    this.capacity = capacity;
+    this.color = color;
+    this.mileage = mileage;
   }
 
   move(miles) {
-    this.mileage += miles
-    console.log(this.mileage)
+    this.mileage += miles;
+    console.log(this.mileage);
   }
-} 
+}
 /*
   Create a vehicle using your new class and save it to a variable called myFirstVehicle
 */
 
 //Code Here
-const myFirstVehicle = new Vehicle(5, 'red', 20000)
+const myFirstVehicle = new Vehicle(5, "red", 20000);
 /* 
   Now we'll create a class that's based off of the vehicle class. 
 
@@ -406,9 +399,9 @@ const myFirstVehicle = new Vehicle(5, 'red', 20000)
 //Code Here
 class Motorcycle extends Vehicle {
   constructor(capacity, color, mileage, make, isCool) {
-    super(capacity, color, mileage)
-    this.make = make
-    this.isCool = isCool
+    super(capacity, color, mileage);
+    this.make = make;
+    this.isCool = isCool;
   }
 }
 /*
@@ -416,11 +409,11 @@ class Motorcycle extends Vehicle {
 */
 
 //Code Here
-const myFirstMotorcycle = new Motorcycle(5, 'red', 1000, 'harley', true)
+const myFirstMotorcycle = new Motorcycle(5, "red", 1000, "harley", true);
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
 */
-myFirstMotorcycle.move(200)
+myFirstMotorcycle.move(200);
 /*
   Let's make another class based off of Vehicle. 
 
@@ -441,22 +434,21 @@ myFirstMotorcycle.move(200)
 
 class Boat extends Vehicle {
   constructor(capacity, color, mileage, name, type, isSeaworthy) {
-    super(capacity, color, mileage)
-    this.name = name
-    this.type = type
-    this.isSeaworthy = isSeaworthy
+    super(capacity, color, mileage);
+    this.name = name;
+    this.type = type;
+    this.isSeaworthy = isSeaworthy;
   }
   checkSeaworthiness() {
     if (this.isSeaworthy) {
-      console.log(`The ${this.type} ${this.name} is seaworthy!`)
+      console.log(`The ${this.type} ${this.name} is seaworthy!`);
     } else {
-      console.log(`You need to get your ${this.type} in shape!`)
+      console.log(`You need to get your ${this.type} in shape!`);
     }
   }
   performMaintenance() {
-    this.isSeaworthy = true
+    this.isSeaworthy = true;
   }
-
 }
 /*
   Create a new boat using your class. You can choose whatever values you like for all the 
@@ -464,25 +456,24 @@ class Boat extends Vehicle {
 */
 
 //Code Here
-const myBoat = new Boat(600,'red',1000, 'kodiak', 'canoe', false)
+const myBoat = new Boat(600, "red", 1000, "kodiak", "canoe", false);
 
 /*
   Call the checkSeaworthiness method on your new boat
 */
 
 //Code
-myFirstBoat.checkSeaworthiness()
+myBoat.checkSeaworthiness();
 
 /*
   Now run the performMaintenance method on your boat
 */
 
 //Code Here
-myFirstBoat.performMaintenance()
+myBoat.performMaintenance();
 /*
   Check the seaworthiness once more (you should be ready for the water!)
 */
 
 //Code Here
-myFirstBoat.checkSeaworthiness
-
+myBoat.checkSeaworthiness();
